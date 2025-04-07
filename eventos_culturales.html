@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Portal general Pulpí</title>
+    <meta name="description" content="Página web en la que se encuentran los principales enlaces de interés de Pulpí, así como un vídeo promocional del mismo.">
+    <meta name="keywords" content="Pulpí, Ayuntamiento, Terreros, San Juan, Almería, Andalucía, Playa, Mercado, Eventos, Deportes, Comercio, Geoda">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-css/bootstrap.min.css">
+    <link rel="stylesheet" href="media/icons/icomoon/icomoon.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <header>
+        <nav>
+            <div class="container-fluid text-center mb-5">
+                <div class="row justify-content-center">
+                    <div class="col m-2">
+                        <a href="https://mercado.pulpi.es/" class="text-decoration-none">
+                            <img src="media/images/escudo.png" alt="Escudo de Pulpí" class="icono-escudo-principal mt-2">
+                            <h1 class="texto-inicio text-white pt-2">INICIO</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+     <!--container-->
+  	 
+	 <div class="site-section">
+        <div class="container-fluid px-20">
+            <div class="row">
+                <div class="col-lg-7 text-center mx-auto">
+                    <h2 class="section-heading"><a
+                            href="/Servicios/cmsdipro/index.nsf/fiestas_view_entidad_rol.xsp?p=[#cmsdip#]"><strong>Eventos</strong></a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+        
+                <bucle>
+                    <div class="col-lg-2">
+                        <div class="post-entry-1 h-100">
+                            <a href="<#url#>" class="mb-3 d-block">
+                                <img src="<#Fiestas_Foto#>" alt="Image" class="img-fluid">
+                            </a>
+                            <div class="post-entry-1-contents">
+        
+                                <span class="meta d-inline-block">
+                                    <#Fiestas_Desde#>
+                                        <h2><a href="<#url#>">
+                                                <#Fiestas_Nombre#>
+                                            </a></h2>
+        
+                                        <p>
+                                            <#Fiestas_Descripcion#>
+                                        </p>
+                            </div>
+                        </div>
+                    </div>
+                </bucle>
+        
+            </div>
+        </div>
+        </div>
+		 
+		 
+
+    <footer class="mt-5">
+        <div class="container-fluid text-center footer-comercio py-3">
+             <div class="row text-white justify-content-center">
+                 <div class="col-12"><span>© Ayuntamiento de Pulpí</span></div>
+                 <div class="col-12"><span>CIF: P-0407500-H</span></div>
+                 <div class="col-12"><span>Avda/Andalucia, 89</span></div>
+                 <div class="col-12"><span>04640 Pulpí (Almería)</span></div>
+                 <div class="col-12">
+                     <span>
+                        <i class="icon-phone text-white"></i>
+                        <a href="tel:+34950464001" class="text-white"> +34 950464001</a>
+                    </span>
+                 </div>
+                  <div class="col-12">
+                     <span>
+                        <i class="icon-mail_outline text-white"></i>
+                        <a href="mailto:registro@pulpi.es" class="text-white"> registro@pulpi.es</a>
+                    </span>
+                  </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap-js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
