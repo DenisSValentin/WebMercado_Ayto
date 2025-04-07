@@ -1,6 +1,13 @@
-body {
+html, body {
+    height: 100%;
     margin: 0;
-    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 nav {
@@ -11,22 +18,6 @@ img {
     max-width: 100%;
     height: auto;
 }
-
-/* img {
-    width: 100%;
-    height: auto;
-    background-size: contain; Siempre se mantiene dentro (se escala)
-    background-size: 100% 100%; Ocupa todo el ancho y alto que puede (no se escala)
-    background-size: cover; Ocupa todo lo que puede pero escalándose, por lo que se puede quedar fuera parte de la imagen.
-} */
-
-/* .enlaces-principales {
-    background-color: #3B83BD;
-}
-
-.icono-icomoon-principal {
-    font-size: 100px;
-} */
 
 .icono-escudo-principal {
     height: 100px;
