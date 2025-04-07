@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Flaticon";
+  src: url("Flaticon.eot?#iefix") format("embedded-opentype"), /* Para IE8 y versiones anteriores */
+       url("Flaticon.woff") format("woff"),   /* Formato compatible con la mayoría de los navegadores */
+       url("Flaticon.ttf") format("truetype"), /* Formato compatible con muchos sistemas */
+       url("Flaticon.svg#Flaticon") format("svg"); /* Formato SVG para navegadores antiguos y algunos usos */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("/Servicios/cmsdipro/configuracion.nsf/plantillasref/Comercio_AytoPulpi_fonts/flaticon/font_./$file/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+.flaticon-therapy:before { content: "\f100"; }
+.flaticon-acupuncture:before { content: "\f101"; }
+.flaticon-acupuncture-1:before { content: "\f102"; }
+.flaticon-herbal:before { content: "\f103"; }
+.flaticon-lithotherapy:before { content: "\f104"; }
+.flaticon-acupuncture-2:before { content: "\f105"; }

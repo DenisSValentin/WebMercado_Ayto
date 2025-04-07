@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+nav {
+    background-color: #3B83BD;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* img {
+    width: 100%;
+    height: auto;
+    background-size: contain; Siempre se mantiene dentro (se escala)
+    background-size: 100% 100%; Ocupa todo el ancho y alto que puede (no se escala)
+    background-size: cover; Ocupa todo lo que puede pero escalándose, por lo que se puede quedar fuera parte de la imagen.
+} */
+
+/* .enlaces-principales {
+    background-color: #3B83BD;
+}
+
+.icono-icomoon-principal {
+    font-size: 100px;
+} */
+
+.icono-escudo-principal {
+    height: 100px;
+    width: auto;
+}
+
+.texto-inicio {
+    font-weight: 700;  /* o 'bold' */
+    font-size: 25px;
+}
+
+.footer-comercio {
+    background-color: #3B83BD;
+    
+}
+
+.enlaces-principales {
+    background-color: #3B83BD;
+}
+
+.enlaces-principales .icono-icomoon-principal {
+    /* Ajuste agresivo: min 25px, preferido 10vw, max 80px */
+    /* 10vw hará que cambie de tamaño muy rápido con el ancho de la ventana */
+    /* Reducido el máximo a 80px para que no sea desproporcionado en pantallas grandes */
+    font-size: clamp(25px, 10vw, 80px);
+    line-height: 1;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.enlaces-principales .titulo-enlace {
+    font-weight: 700;  /* o 'bold' */
+    /* Ajuste agresivo: min 9px, preferido 3vw, max 18px */
+    /* 9px es muy pequeño, pero necesario si la columna es muy estrecha */
+    /* 3vw hace que escale razonablemente rápido */
+    /* Reducido el máximo para mantener proporción */
+    font-size: clamp(8px, 2vw, 18px);
+    word-break: break-word;   /* Importante para partir palabras largas */
+    overflow-wrap: break-word; /* Alternativa estándar para partir palabras */
+    line-height: 1.1;         /* Ligeramente reducido para texto pequeño */
+    text-align: center;       /* Asegurar centrado del texto si se parte */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Asegura que las filas fuercen la misma altura si es necesario */
+.row {
+    align-items: stretch;
+}
+
+/* Asegura que el contenedor flex dentro de la columna ocupe espacio */
+.enlaces-principales.d-flex {
+    display: flex; /* Asegura que es flex */
+    align-items: stretch; /* Estira el item hijo (el enlace) */
+}
+.enlaces-principales a.d-flex {
+    width: 100%; /* Asegura que el enlace ocupa el ancho */
+}
