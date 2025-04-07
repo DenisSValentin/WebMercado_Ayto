@@ -46,6 +46,7 @@ img {
 .enlaces-principales {
     background-color: #3B83BD;
     aspect-ratio: 1 / 1;
+    max-width: 250px;
 }
 
 .enlaces-principales .icono-icomoon-principal {
