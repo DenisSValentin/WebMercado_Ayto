@@ -37,16 +37,37 @@ img {
 }
 
 .enlaces-principales {
-    background-color: #3b83bd;
+    /* background-color: #3b83bd; */
     aspect-ratio: 1 / 1;
     max-width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
-    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out; 
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);  */
+    /* <<< CAMBIO: Sombra más pronunciada y en capas */
+
+    background-image: linear-gradient(to bottom, #4a9cdb, #3B83BD); 
+
+    box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.15),  /* Sombra más cercana y definida */
+    0 10px 20px rgba(0, 0, 0, 0.25); /* Sombra más difusa y extendida */
+
+    /* transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;  */
+    transition: background-image 0.2s ease-in-out, /* Transición para degradado */
+                box-shadow 0.2s ease-in-out, 
+                transform 0.2s ease-in-out, 
+                border-color 0.2s ease-in-out,
+                color 0.2s ease-in-out; 
 }
 
 .enlaces-principales:hover {
-    background-color: #266190; /*  Se pone más oscuro al seleccionarlo */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    /* background-color: #266190; */
+
+    background-image: linear-gradient(to bottom, #3B83BD, #266190); 
+
+    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); */
+    /* <<< CAMBIO: Sombra hover también más pronunciada */
+    box-shadow: 
+    0 6px 10px rgba(0, 0, 0, 0.2), 
+    0 14px 25px rgba(0, 0, 0, 0.3);
+
     transform: scale(1.05);
 }
 
@@ -98,10 +119,12 @@ img {
     overflow: hidden;    /* Buena práctica con border-radius */
     
     /* <<< CAMBIO: Sombra sutil añadida */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave. Puedes ajustar los valores */
-    
-    /* Alternativa: si prefieres un borde en lugar de sombra */
-    /* border: 1px solid #dee2e6; */ /* Gris claro de Bootstrap */
+    box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.15),
+    0 10px 20px rgba(0, 0, 0, 0.25);
+
+    border: 2px inset #f8f9fa; /* Puedes cambiar '2px' a '1px' o '3px' si prefieres otro grosor */
+
 }
 
 /* Asegura que las filas fuercen la misma altura si es necesario */
