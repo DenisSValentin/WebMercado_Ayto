@@ -8,10 +8,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #f8f9fa;
 }
 
 nav {
-    background-color: #3B83BD;
+    background-color: #3b83bd;
 }
 
 img {
@@ -30,20 +31,22 @@ img {
 }
 
 .footer-comercio {
-    background-color: #3B83BD;
+    background-color: #3b83bd;
     
-}
-.enlaces-principales:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-    transform: scale(1.05);
 }
 
 .enlaces-principales {
-    background-color: #3B83BD;
+    background-color: #3b83bd;
     aspect-ratio: 1 / 1;
     max-width: 250px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; 
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out; 
+}
+
+.enlaces-principales:hover {
+    background-color: #266190; /*  Se pone más oscuro al seleccionarlo */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
 }
 
 .enlaces-principales .icono-icomoon-principal {
@@ -55,6 +58,19 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+
+    color: #fff; /* Definir color base explícitamente */
+    /* <<< CAMBIO: Añadida transición para el color del icono */
+    transition: color 0.3s ease-in-out; 
+}
+
+/* NUEVA REGLA: Estilo del icono cuando el bloque está en hover */
+.enlaces-principales:hover .icono-icomoon-principal {
+    /* <<< CAMBIO: Blanco semi-transparente (efecto grisáceo) */
+    color: rgba(255, 255, 255, 0.8); 
+    
+    /* Descomenta la línea de abajo si la clase text-white de Bootstrap interfiere: */
+    /* color: rgba(255, 255, 255, 0.8) !important; */
 }
 
 .enlaces-principales .titulo-enlace {
@@ -66,10 +82,25 @@ img {
     font-size: clamp(8px, 2vw, 18px);
     word-break: break-word;   /* Importante para partir palabras largas */
     overflow-wrap: break-word; /* Alternativa estándar para partir palabras */
-    line-height: 1.1;         /* Ligeramente reducido para texto pequeño */
+    line-height: 1.4;         /* Ligeramente reducido para texto pequeño */
     text-align: center;       /* Asegurar centrado del texto si se parte */
     margin-top: 0;
     margin-bottom: 0;
+}
+
+/* --- INICIO ESTILOS VIDEO/IFRAME --- */
+.video-principal {
+    display: block; /* Ayuda a prevenir espacios extra */
+    width: 100%; 
+    aspect-ratio: 16/9; 
+    border-radius: 10px; /* Mantenemos las esquinas redondeadas */
+    overflow: hidden;    /* Buena práctica con border-radius */
+    
+    /* <<< CAMBIO: Sombra sutil añadida */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave. Puedes ajustar los valores */
+    
+    /* Alternativa: si prefieres un borde en lugar de sombra */
+    /* border: 1px solid #dee2e6; */ /* Gris claro de Bootstrap */
 }
 
 /* Asegura que las filas fuercen la misma altura si es necesario */
