@@ -11,8 +11,9 @@ body {
     background-color: #f8f9fa;
 }
 
-nav {
-    background-color: #3b83bd;
+header {
+    background-color: #3B83BD; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 img {
@@ -32,7 +33,7 @@ img {
 
 .footer-comercio {
     background-color: #3b83bd;
-    
+    box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.5); /* Sombra suave arriba */
 }
 
 .enlaces-principales {
