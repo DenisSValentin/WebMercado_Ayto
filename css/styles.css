@@ -12,6 +12,11 @@ body {
     background-color: #f8f9fa;
 }
 
+/* Asegura que las filas fuercen la misma altura si es necesario */
+.row {
+    align-items: stretch;
+}
+
 /* HEADER */
 header {
     background-color: #3B83BD; 
@@ -20,96 +25,104 @@ header {
         0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 .icono-escudo-principal {
     height: 100px;
     width: auto;
+    max-width: 100%;
 }
 
 .texto-inicio {
-    font-weight: 700;  /* o 'bold' */
+    font-weight: 700;
     font-size: 25px;
     color: #f8f9fa;
 }
 
 /* ENLACES PRINCIPALES */
-/* BLOQUE GENERAL ENLACES PRINCIPALES */
+/* Los enlaces de manera predeterminada */
 .enlaces-principales {
     /* background-color: #3b83bd; */
+    background-image: linear-gradient(to bottom, #4a9cdb, #3B83BD); 
     aspect-ratio: 1 / 1;
     max-width: 250px;
-
-    background-image: linear-gradient(to bottom, #4a9cdb, #3B83BD); 
+    color: #f8f9fa;
 
     box-shadow: 
         0 3px 6px rgba(0, 0, 0, 0.15),  /* Sombra más cercana y definida */
         0 8px 20px rgba(0, 0, 0, 0.25); /* Sombra más difusa y extendida */
 
-    /* transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;  */
-    transition: background-image 0.2s ease-in-out, /* Transición para degradado */
-                box-shadow 0.2s ease-in-out, 
-                transform 0.2s ease-in-out, 
-                border-color 0.2s ease-in-out,
-                color 0.2s ease-in-out; 
+    transition:
+        box-shadow 0.2s ease-in-out, 
+        transform 0.2s ease-in-out;
 }
 
+/* Los enlaces al poner el ratón encima */
 .enlaces-principales:hover {
     /* background-color: #266190; */
-
     background-image: linear-gradient(to bottom, #3B83BD, #266190); 
 
-    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); */
-    /* <<< CAMBIO: Sombra hover también más pronunciada */
     box-shadow: 
         0 5px 10px rgba(0, 0, 0, 0.2), 
         0 12px 25px rgba(0, 0, 0, 0.3);
 
-    transform: scale(1.05);
+    transform: scale(1.05); /* Hace el icono más grande */
 }
 
+/* Como reacciona el icono en tamaño y color */
 .enlaces-principales .icono-icomoon-principal {
-    /* Ajuste agresivo: min 25px, preferido 10vw, max 80px */
-    /* 10vw hará que cambie de tamaño muy rápido con el ancho de la ventana */
-    /* Reducido el máximo a 80px para que no sea desproporcionado en pantallas grandes */
     font-size: clamp(25px, 10vw, 80px);
     line-height: 1;
     display: block;
     max-width: 100%;
     height: auto;
 
-    color: #f8f9fa; /* Definir color base explícitamente */
-    /* <<< CAMBIO: Añadida transición para el color del icono */
-    transition: color 0.3s ease-in-out; 
+    color: #f8f9fa;
+    transition: color 0.2s ease-in-out; 
 }
 
-/* NUEVA REGLA: Estilo del icono cuando el bloque está en hover */
+/* Como reacciona el icono al poner el ratón encima del bloque enlace */
 .enlaces-principales:hover .icono-icomoon-principal {
-    /* <<< CAMBIO: Blanco semi-transparente (efecto grisáceo) */
-    color: rgba(255, 255, 255, 0.8); 
-    
-    /* Descomenta la línea de abajo si la clase text-white de Bootstrap interfiere: */
-    /* color: rgba(255, 255, 255, 0.8) !important; */
+     color: #f8f9faf1;
 }
 
+/* El texto del enlace */
 .enlaces-principales .titulo-enlace {
-    font-weight: 700;  /* o 'bold' */
-    /* Ajuste agresivo: min 9px, preferido 3vw, max 18px */
-    /* 9px es muy pequeño, pero necesario si la columna es muy estrecha */
-    /* 3vw hace que escale razonablemente rápido */
-    /* Reducido el máximo para mantener proporción */
+    font-weight: 700;
     font-size: clamp(8px, 2vw, 18px);
-    word-break: break-word;   /* Importante para partir palabras largas */
-    overflow-wrap: break-word; /* Alternativa estándar para partir palabras */
-    line-height: 1.4;         /* Ligeramente reducido para texto pequeño */
-    text-align: center;       /* Asegurar centrado del texto si se parte */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+    text-align: center;
     margin-top: 0;
     margin-bottom: 0;
 }
 
+/* Como reacciona el texto al poner el ratón encima del bloque enlace */
+.enlaces-principales:hover .titulo-enlace {
+    color: #f8f9faf1;
+}
+
+/* Asegura que el contenedor flex dentro de la columna ocupe espacio */
+.enlaces-principales.d-flex {
+    display: flex; /* Asegura que es flex */
+    align-items: stretch; /* Estira el item hijo (el enlace) */
+}
+
+.enlaces-principales a.d-flex {
+    width: 100%; /* Asegura que el enlace ocupa el ancho */
+}
+
+/* VIDEO/IFRAME */
+.video-principal {
+    display: block;
+    width: 100%; 
+    aspect-ratio: 16/9; 
+    border-radius: 10px;
+    border: 1px inset #f8f9fa; /* Borde inmersivo */
+    overflow: hidden;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* FOOTER */
 .footer-comercio {
     background-color: #3b83bd;
     box-shadow: 
@@ -118,37 +131,6 @@ img {
     color: #f8f9fa;
 }
 
-
-
-/* --- INICIO ESTILOS VIDEO/IFRAME --- */
-.video-principal {
-    display: block; /* Ayuda a prevenir espacios extra */
-    width: 100%; 
-    aspect-ratio: 16/9; 
-    border-radius: 10px; /* Mantenemos las esquinas redondeadas */
-    overflow: hidden;    /* Buena práctica con border-radius */
-    
-    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
-
-    /* <<< CAMBIO: Sombra sutil añadida */
-    /* box-shadow: 
-    0 4px 6px rgba(0, 0, 0, 0.15),
-    0 10px 20px rgba(0, 0, 0, 0.25); */
-
-    border: 1px inset #f8f9fa; /* Puedes cambiar '2px' a '1px' o '3px' si prefieres otro grosor */
-
-}
-
-/* Asegura que las filas fuercen la misma altura si es necesario */
-.row {
-    align-items: stretch;
-}
-
-/* Asegura que el contenedor flex dentro de la columna ocupe espacio */
-.enlaces-principales.d-flex {
-    display: flex; /* Asegura que es flex */
-    align-items: stretch; /* Estira el item hijo (el enlace) */
-}
-.enlaces-principales a.d-flex {
-    width: 100%; /* Asegura que el enlace ocupa el ancho */
+.footer-comercio a{
+    color: #f8f9fa;
 }
