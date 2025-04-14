@@ -29,11 +29,13 @@ img {
 .texto-inicio {
     font-weight: 700;  /* o 'bold' */
     font-size: 25px;
+    color: #f8f9fa;
 }
 
 .footer-comercio {
     background-color: #3b83bd;
     box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.5); /* Sombra suave arriba */
+    color: #f8f9fa;
 }
 
 .enlaces-principales {
