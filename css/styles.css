@@ -1,3 +1,4 @@
+/* HTML EN GENERAL */
 html, body {
     height: 100%;
     margin: 0;
@@ -11,9 +12,12 @@ body {
     background-color: #f8f9fa;
 }
 
+/* HEADER */
 header {
     background-color: #3B83BD; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 
+        0 2px 10px rgba(0, 0, 0, 0.2),
+        0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 img {
@@ -32,24 +36,18 @@ img {
     color: #f8f9fa;
 }
 
-.footer-comercio {
-    background-color: #3b83bd;
-    box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.5); /* Sombra suave arriba */
-    color: #f8f9fa;
-}
-
+/* ENLACES PRINCIPALES */
+/* BLOQUE GENERAL ENLACES PRINCIPALES */
 .enlaces-principales {
     /* background-color: #3b83bd; */
     aspect-ratio: 1 / 1;
     max-width: 250px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);  */
-    /* <<< CAMBIO: Sombra más pronunciada y en capas */
 
     background-image: linear-gradient(to bottom, #4a9cdb, #3B83BD); 
 
     box-shadow: 
-    0 4px 6px rgba(0, 0, 0, 0.15),  /* Sombra más cercana y definida */
-    0 10px 20px rgba(0, 0, 0, 0.25); /* Sombra más difusa y extendida */
+        0 3px 6px rgba(0, 0, 0, 0.15),  /* Sombra más cercana y definida */
+        0 8px 20px rgba(0, 0, 0, 0.25); /* Sombra más difusa y extendida */
 
     /* transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;  */
     transition: background-image 0.2s ease-in-out, /* Transición para degradado */
@@ -67,8 +65,8 @@ img {
     /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); */
     /* <<< CAMBIO: Sombra hover también más pronunciada */
     box-shadow: 
-    0 6px 10px rgba(0, 0, 0, 0.2), 
-    0 14px 25px rgba(0, 0, 0, 0.3);
+        0 5px 10px rgba(0, 0, 0, 0.2), 
+        0 12px 25px rgba(0, 0, 0, 0.3);
 
     transform: scale(1.05);
 }
@@ -83,7 +81,7 @@ img {
     max-width: 100%;
     height: auto;
 
-    color: #fff; /* Definir color base explícitamente */
+    color: #f8f9fa; /* Definir color base explícitamente */
     /* <<< CAMBIO: Añadida transición para el color del icono */
     transition: color 0.3s ease-in-out; 
 }
@@ -112,6 +110,16 @@ img {
     margin-bottom: 0;
 }
 
+.footer-comercio {
+    background-color: #3b83bd;
+    box-shadow: 
+        0 -2px 10px rgba(0, 0, 0, 0.2),
+        0 -4px 20px rgba(0, 0, 0, 0.3);
+    color: #f8f9fa;
+}
+
+
+
 /* --- INICIO ESTILOS VIDEO/IFRAME --- */
 .video-principal {
     display: block; /* Ayuda a prevenir espacios extra */
@@ -120,12 +128,14 @@ img {
     border-radius: 10px; /* Mantenemos las esquinas redondeadas */
     overflow: hidden;    /* Buena práctica con border-radius */
     
-    /* <<< CAMBIO: Sombra sutil añadida */
-    box-shadow: 
-    0 4px 6px rgba(0, 0, 0, 0.15),
-    0 10px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
 
-    border: 2px inset #f8f9fa; /* Puedes cambiar '2px' a '1px' o '3px' si prefieres otro grosor */
+    /* <<< CAMBIO: Sombra sutil añadida */
+    /* box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.15),
+    0 10px 20px rgba(0, 0, 0, 0.25); */
+
+    border: 1px inset #f8f9fa; /* Puedes cambiar '2px' a '1px' o '3px' si prefieres otro grosor */
 
 }
 
