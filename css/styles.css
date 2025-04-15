@@ -37,7 +37,14 @@ header {
     color: #f8f9fa;
 }
 
-/* ENLACES PRINCIPALES */
+/* CONTENIDO PRINCIPAL */
+main.flex-grow-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Centrado vertical */
+    align-items: center;     /* Centrado horizontal */
+}
+
 /* Los enlaces de manera predeterminada */
 .enlaces-principales {
     /* background-color: #3b83bd; */
@@ -111,7 +118,7 @@ header {
     width: 100%; /* Asegura que el enlace ocupa el ancho */
 }
 
-/* VIDEO/IFRAME */
+/* Video/Iframe */
 .video-principal {
     display: block;
     width: 100%; 
