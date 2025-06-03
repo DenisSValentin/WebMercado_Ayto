@@ -183,5 +183,12 @@ header {
 
 .imagen-espacio-deportivo{
     width: 350px;
-    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.imagen-escuela-deportiva{
+    width: 350px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
 }
