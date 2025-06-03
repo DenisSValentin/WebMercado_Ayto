@@ -38,11 +38,18 @@ header {
 }
 
 /* CONTENIDO PRINCIPAL */
-main.flex-grow-1 {
+.main-principal{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; /* Centrado vertical */
-    align-items: center;     /* Centrado horizontal */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 /* Los enlaces de manera predeterminada */
@@ -121,8 +128,18 @@ main.flex-grow-1 {
 /* Video/Iframe */
 .video-principal {
     display: block;
+    aspect-ratio: 16/9; /* Eliminar si se usa video en lugar de iframe */
     width: 100%; 
-    aspect-ratio: 16/9; 
+    border-radius: 10px;
+    border: 1px inset #f8f9fa; /* Borde inmersivo */
+    overflow: hidden;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Iframe de lugares de interes */
+.lugares-interes {
+    width: 750px;
+    height: 750px; 
     border-radius: 10px;
     border: 1px inset #f8f9fa; /* Borde inmersivo */
     overflow: hidden;
@@ -140,4 +157,31 @@ main.flex-grow-1 {
 
 .footer-comercio a{
     color: #f8f9fa;
+}
+
+
+/* COMPONENTES */
+.titulo-apartado-mercado{
+    font-weight: 700;
+    background-color: #3B83BD; 
+    /* background-image: linear-gradient(to bottom, #4A9CBD, #3B83BD); */
+    background-clip: text;
+    color: transparent;
+}
+
+/*.imagen-evento{
+    border-radius: 10px;
+}*/
+
+.fecha-evento{
+    font-weight: 700;
+}
+
+.enlace-evento{
+    font-weight: 700;
+}
+
+.imagen-espacio-deportivo{
+    width: 350px;
+    height: auto;
 }
