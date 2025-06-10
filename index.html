@@ -65,11 +65,18 @@
             <div class="container text-center my-5">
                 <div class="row justify-content-center">
                     <div class="col-11 mx-auto">
-                        <video style="width: 100%; aspect-ratio: 16/9;" src="media/videos/video_presentacion_pulpi.mp4"
+                        <div class="video-wrapper">
+                            <video class="video-principal"
+                                src="media/videos/video_presentacion_pulpi.mp4"
+                                title="Vídeo de presentación de Pulpí"
+                                autoplay muted loop playsinline
+                            ></video>
+                        </div>
+                        <!-- <video  style="width: 100%; aspect-ratio: 16/9;" src="media/videos/video_presentacion_pulpi.mp4"
                             title="Vídeo de presentación de Pulpí"
                             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen autoplay muted loop>
-                        </video>
+                        </video> -->
                         <!-- <iframe class="video-principal"
                             src="https://www.youtube.com/embed/zixStJFlvms?controls=0&autoplay=1&mute=1&loop=1&playlist=zixStJFlvms"
                             title="Vídeo de presentación de Pulpí" frameborder="0"
@@ -91,7 +98,12 @@
                         class="enlaces-principales col-3 mx-auto rounded-3 p-3 text-decoration-none d-flex flex-column justify-content-center align-items-center h-100">
                         <i class="icono-icomoon-principal icon-crop_portrait mb-3"></i>  
                         <h2 class=" titulo-enlace">ESPEJO</h2>
-                    </a> 
+                    </a>
+                    <a href="/pages/conoce_pulpi.html"
+                        class="enlaces-principales col-3 mx-auto rounded-3 p-3 text-decoration-none d-flex flex-column justify-content-center align-items-center h-100">
+                        <i class="icono-icomoon-principal icon-map2  mb-3"></i> <!-- icon-pin_drop -->
+                        <h3 class=" titulo-enlace fw-bold">CONOCE PULPÍ</h3>
+                    </a>
                     <!-- <a href="/index.html"
                         class="enlaces-principales col-3 mx-auto rounded-3 p-3 text-decoration-none d-flex flex-column justify-content-center align-items-center h-100">
                         <i class="icono-icomoon-principal icon-camera mb-3"></i> 
@@ -102,11 +114,11 @@
                         <i class="icono-icomoon-principal icon-restaurant mb-3"></i> icon-free_breakfast
                         <h2 class=" titulo-enlace">DÓNDE COMER</h2>
                     </a> -->
-                    <a href="/pages/lugares_interes.html"
+                    <!-- <a href="/pages/lugares_interes.html"
                         class="enlaces-principales col-3 mx-auto rounded-3 p-3 text-decoration-none d-flex flex-column justify-content-center align-items-center h-100">
-                        <i class="icono-icomoon-principal icon-map2  mb-3"></i> <!-- icon-pin_drop -->
+                        <i class="icono-icomoon-principal icon-map2  mb-3"></i>
                         <h3 class=" titulo-enlace fw-bold">LUGARES DE INTERÉS</h3>
-                    </a>
+                    </a> -->
                 </div>
             </div>
         <!-- El módulo BODY_DE_WEB llega hasta aquí, sin el <main>, para que así siempre los elementos que se introzcan se ajusten automáticamente de manera vertical -->
@@ -141,7 +153,7 @@
             </div>
         </footer>
 
-        <script src="js/bootstrap-js/bootstrap.bundle.min.js"></script>
+        <script src="/js/bootstrap-js/bootstrap.bundle.min.js"></script>
     </body>
 
 </html>
