@@ -1,5 +1,5 @@
 // Ruta a tu archivo PDF
-const pdfPath = '/media/pdfs/conoce_pulpi.pdf';
+const pdfPath = '/media/pdfs/descubre_pulpi.pdf';
 
 // Configurar el worker de PDF.js
 // IMPORTANTE: La ruta a pdf.worker.js debe ser correcta desde tu HTML
@@ -14,6 +14,7 @@ let pageRendering = false; // Bandera para evitar renderizar varias páginas a l
 let pageNumPending = null; // Página a la que ir si hay una renderización en curso
 
 // Elementos de la interfaz (si los tienes)
+const firstPageBtn = document.getElementById('firstPageBtn');
 const prevPageBtn = document.getElementById('prevPage');
 const nextPageBtn = document.getElementById('nextPage');
 const pageNumberSpan = document.getElementById('pageNumber');
@@ -110,7 +111,16 @@ function onNextPage() {
     queueRenderPage(pageNum);
 }
 
+/**
+ * Displays the first page.
+ */
+function onFirstPage() {
+    pageNum = 1; // Asegurarse de que pageNum esté en 1
+    queueRenderPage(pageNum);
+}
+
 // Asignar eventos a los botones (si existen)
+if (firstPageBtn) firstPageBtn.addEventListener('click', onFirstPage);
 if (prevPageBtn) prevPageBtn.addEventListener('click', onPrevPage);
 if (nextPageBtn) nextPageBtn.addEventListener('click', onNextPage);
 

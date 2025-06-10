@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
-        <title>Portal Pulpí | Conoce Pulpí</title>
+        <title>Portal Pulpí | Descubre Pulpí</title>
         <meta name="description"
             content="Página web con los principales enlaces de interés de Pulpí, así como un vídeo promocional del mismo.">
         <meta name="keywords"
@@ -43,29 +43,36 @@
         <main class="flex-grow-1">
             <!-- MÓDULO BODY_DE_WEB -->
             <div class="container text-center">
-        
+
                 <div class="row p-3 align-items-center">
                     <div class="col">
-                        <h1 class="mb-1 titulo-apartado-mercado">CONOCE PULPÍ</h1>
+                        <h1 class="mb-1 titulo-apartado-mercado">DESCUBRE PULPÍ</h1>
                     </div>
                 </div>
-        <div class="container text-center my-5">
-            <div class="row justify-content-center">
-                <div class="col-11 mx-auto">
-                    <!-- Contenedor del PDF -->
-                    <div id="pdf-viewer-container" class="d-flex justify-content-center">
-                        <canvas id="pdfCanvas"></canvas>
-                    </div>
-        
-                    <!-- Botones debajo del PDF -->
-                    <div id="pdfNavButtons" class="d-flex justify-content-center align-items-center gap-3 mt-4">
-                        <button id="prevPage" class="btn btn-primary boton-pdf">Página Anterior</button>
-                        <span><span id="pageNumber">1</span> / <span id="totalPages">--</span></span>
-                        <button id="nextPage" class="btn btn-primary boton-pdf">Página Siguiente</button>
+                <div class="container text-center my-5">
+                    <div class="row justify-content-center">
+                        <div class="col-11 mx-auto">
+
+                            <!-- Ir a la primera página -->
+                            <div id="pdfNavButtons" class="d-flex justify-content-center align-items-center gap-3 mt-4">
+                                <button id="firstPageBtn" class="btn btn-primary boton-pdf">Volver a la Primera
+                                    Página</button>
+                            </div>
+
+                            <!-- Contenedor del PDF -->
+                            <div id="pdf-viewer-container" class="d-flex justify-content-center">
+                                <canvas id="pdfCanvas"></canvas>
+                            </div>
+
+                            <!-- Botones debajo del PDF -->
+                            <div id="pdfNavButtons" class="d-flex justify-content-center align-items-center gap-3 mt-4">
+                                <button id="prevPage" class="btn btn-primary boton-pdf">Página Anterior</button>
+                                <span><span id="pageNumber">1</span> / <span id="totalPages">--</span></span>
+                                <button id="nextPage" class="btn btn-primary boton-pdf">Página Siguiente</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
             </div>
             <!-- El módulo BODY_DE_WEB llega hasta aquí, sin el <main>, para que así siempre los elementos que se introzcan se ajusten automáticamente de manera vertical -->
         </main>

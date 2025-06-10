@@ -340,3 +340,7 @@ canvas {
     color: white;
     border-color: #000;
 }
+
+.imagen-noticia{
+    border-radius: 10px;
+}
