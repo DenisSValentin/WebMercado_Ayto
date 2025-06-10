@@ -273,15 +273,17 @@ header {
     text-align: justify;
 }
 
+/*INSERCIÓN DEL PDF*/
 #pdf-viewer-container {
-    width: 800px;
+    width: 100%;
     /* Ajusta según tus necesidades */
-    height: 600px;
+    height: auto;
     /* Ajusta según tus necesidades */
     overflow: auto;
     /* Permite desplazamiento si el PDF es más grande */
     border: 1px solid #ccc;
     /* Borde para visualizar el área */
+    border-radius: 10px;
     margin: 20px auto;
     /* Centrar para el ejemplo */
     position: relative;
@@ -289,6 +291,8 @@ header {
 }
 
 canvas {
+    width: 100% !important;
+    height: auto !important;
     display: block;
     /* Elimina espacio extra debajo del canvas */
     margin: 0 auto;
@@ -311,7 +315,7 @@ canvas {
 }
 
 .pdf-nav-buttons button {
-    background: #007bff;
+    background: #3B83BD !important;
     color: white;
     border: none;
     padding: 8px 12px;
@@ -320,6 +324,19 @@ canvas {
 }
 
 .pdf-nav-buttons button:disabled {
-    background: #cccccc;
+    background: #3B83BD;
     cursor: not-allowed;
+    border-color: #000;
+}
+
+.boton-pdf{
+    background: #3B83BD !important;
+    color: white;
+    border-color: #616161;
+}
+
+.boton-pdf:hover{
+    background: #3B83BD !important;
+    color: white;
+    border-color: #000;
 }
